@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Grant University</title>
+        <link href="./resources/ExternStyleSheet.css" rel="stylesheet" type="text/css" />
+    </h:head>
+    <h:body>
+        <ui:composition template="BaseTemplate.xhtml">
+            <ui:define name="body">
+                <font color="darkblue" size="+2"><br/>
+                      <center>Registration Form</center>
+                    </font> <br/>
+                    <table bgcolor="black" cellpadding="12px" border="1" width="60%" align="center"  style="height:120px">
+                            <tr>
+                                <td bgcolor="white">
+                    <table border="0" width="100%" bgcolor="white" align="center" style="height: 100px">
+ <h:form>
+     <tr>
+                            <td>First Name:</td>
+                            <f:ajax event="change" render="nameError">
+                            <td><h:inputText id="fName" value="#{registrationForm.firstName}" required="true" requiredMessage="You must enter the first name" validator="#{registrationForm.validateName}"/>
+                                <h:message for="fName" style="color:red"/>
+                                <h:message for="fName" id="nameError" style="color:red"/>
+                            </td>
+                             </f:ajax>
+    </tr>                  <tr>
+                            <td>Last Name:</td>
+                            <td><h:inputText id="lName" value="#{registrationForm.lastName}" required="true"  requiredMessage="You must enter the last name"/>
+                                <h:message for="lName" style="color:red"/>
+                            </td>
+
+</tr>                        <tr>
+                            <td>Select Gender:</td>
+                            <td><h:selectOneRadio id="gender" value="#{registrationForm.gender}" required="true"  requiredMessage="You must select the gender">
+                    <f:selectItem itemValue="m" itemLabel="Male" />
+                    <f:selectItem itemValue="f" itemLabel="Female" />
+                    </h:selectOneRadio>
+                    <h:message for="gender" style="color:red"/>
+                            </td>
+</tr>                        <tr>
+                            <td>Date of birth:</td>
+                            <td><h:inputText id="dob" value="#{registrationForm.dateofBirth}" required="true" requiredMessage="You must enter date of birth" converterMessage="Enter DOB in MM/DD/YY format">
+                                    <f:convertDateTime pattern="MM/dd/yy" type="date"/>
+                                </h:inputText>
+                                <h:message for="dob" style="color:red"/>
+                            </td>
+</tr>                      <tr>
+                            <td>Address:</td>
+                            <td><h:inputTextarea id="add" rows="3" value="#{registrationForm.address}" required="true" requiredMessage="You must enter the address"/>
+                                <font color="red"><h:message for="add"/></font>
+                            </td>
+</tr>                       <tr>
+                            <td>Phone number:</td>
+                            <td><h:inputText id="ph" value="#{registrationForm.contactNumber}" required="true"  requiredMessage="You must enter a contact number" validatorMessage="Enter number in 11-111-11111111 format">
+                                    <f:validateRegex pattern="[0-9]+[0-9]+\-[0-9]+[0-9][0-9]+\-[0-9]+[0-9][0-9][0-9]+[0-9][0-9][0-9]+[0-9]"/>
+                                </h:inputText>
+                                <h:message for="ph" style="color:red"/>
+
+                            </td>
+</tr>                       <tr>
+                            <td>E-mail Id:</td>
+                            <td><h:inputText id="email" value="#{registrationForm.emailID}" required="true" requiredMessage="You must enter the e-mail Id" validator="#{registrationForm.validateEmail}" validatorMessage="Invalid e-mail Id"/>
+                               <h:message for="email" style="color:red"/>
+                            </td>
+</tr>
+                        <tr>
+                            <td>User Id:</td>
+                            <td><h:inputText  id="uid" value="#{registrationForm.userID}" required="true" requiredMessage="You must enter user Id" validatorMessage="User Id should be at least 6 charaters long">
+                                    <f:validateLength minimum="6"/>
+                                </h:inputText>
+                              <h:message for="uid" style="color:red"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><h:inputSecret id="pass" size="12" value="#{registrationForm.password}" required="true" requiredMessage="You must enter the password" validatorMessage="Password must be minimum 5 characters long" validator="#{registrationForm.validateFinalPassword}">
+                                <f:validateLength minimum="5"/>
+                                </h:inputSecret>
+                                <h:message for="pass" style="color:red"/>
+                            </td>
+</tr>
+                        <tr>
+                            <td>Confirm password:</td>
+                            <td><h:inputSecret id="cpass" size="12" value="#{registrationForm.confirmPassword}" required="true" requiredMessage="You must confirm the password" validator="#{registrationForm.validateCPassword}"/>
+                                <h:message for="cpass" style="color:red"/>
+                            </td>
+</tr>                   <tr>
+                            <td align="right"><br/>
+                                <h:commandButton styleClass="button" value="Submit" action="Success"/>
+                            </td>
+                            <td align="left"><br/>
+                                <h:commandButton styleClass="button" value="Reset"  immediate="true" action="Registration"/>
+                            </td>
+</tr>
+</h:form>
+                    </table>
+                </td>
+           </tr>
+               </table>
+        </ui:define>
+       </ui:composition>
+    </h:body>
+</html>
+

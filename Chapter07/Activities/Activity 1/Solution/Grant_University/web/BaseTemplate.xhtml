@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:lc="http://java.sun.com/jsf/composite/LoginControl">
+    <h:head>
+        <title>Grant University</title>
+        <link href="./resources/ExternStyleSheet.css" rel="stylesheet" type="text/css" />
+    </h:head>
+    <h:body>
+<table border="0" bgcolor="#808080" align="top" width="100%" style="height:100px">
+  <tr>
+   <td bgcolor="#000080" align="center">
+     <font style="font-family: 'Arial Rounded MT Bold', Gadget, sans-serif;" size="+4" color="#FFE4B5">GRANT UNIVERSITY</font>
+   </td>
+   <td bgcolor="666699" align="left" width="180">     <img alt=""  src="Images/education.jpg" width="180" height="120" align="right"/>
+   </td>
+  </tr>
+</table>
+<table bgcolor="white"  border="1"  align="top" width="100%" style="height:470px">
+<tr>
+   <td bgcolor="#000080" width="20%" valign="top" align="center">
+     <br/>   <br/>
+     <h:form>
+      <h:commandLink styleClass="fFormat" action="index" value="Home"></h:commandLink>
+      <br/>   <br/>
+      <h:commandLink styleClass="fFormat" action="AboutUs" value="About Us"></h:commandLink>
+      <br/>   <br/>
+      <h:commandLink styleClass="fFormat" action="Registration" value="Registration"></h:commandLink>
+      <br/>   <br/>
+      <h:commandLink styleClass="fFormat" action="Admissions" value="Admissions"></h:commandLink>
+      <br/>   <br/>
+      <h:commandLink styleClass="fFormat" action="Contacts" value="Contact Us"></h:commandLink>
+      <br/><br/>
+      <h:commandLink styleClass="fFormat" action="CourseDetails" value="Course Details"></h:commandLink>
+     </h:form>
+     <lc:LoginControl userName="#{bean.ID}" password="#{bean.PASS}" submitValue="Submit" resetValue="Reset"/>
+</td>
+       <!-- Page specific content starts here  -->
+  <td width="85%" valign="top" bgcolor="white">
+      <ui:insert name="body"/>
+  </td>
+</tr>
+</table>
+    </h:body>
+</html>
+

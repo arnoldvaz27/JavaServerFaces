@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Book Information</title>
+    </h:head>
+    <h:body>
+        <table border="0" bgcolor="#808080" align="top" width="100%" style="height:90px">
+            <tr>
+              <td bgcolor="Yellow" align="center"> <!--font color="Gold"-->
+                  <font style="font-family: 'SHOWCARD GOTHIC',sans-serif;"
+                            size="+4" color="Green">New Tech Book Store®
+                  </font>
+                </td>
+                <td align="left" width="180">
+                    <img alt=""  src="images/books.gif" width="180" height="90" align="right"/>
+                </td>
+            </tr>
+        </table>
+        <table align="left" width="100%" style="height:450px">
+            <tr>
+            <td style=" font-family:verdana; text-decoration: none;color:black ; font-size: large; " bgcolor="yellow"  width="20%" valign="top" align="center"> <br/>
+              <h:form>
+                <h:commandLink action="for home" value="Home"/><br/><br/>
+                <h:commandLink action="for About Us" value="About Us"/><br/><br/>
+                <h:commandLink action="for Registration Form"  value="Registration"/><br/><br/>
+                <h:commandLink action="for Contact" value="Contact Us"/><br/><br/>
+                <h:commandLink action="Book Details" value="Book Information"/><br/><br/>
+
+              </h:form>
+            <br/><br/><br/>
+            <table  cellspacing="0.5" border="1" align="center" width="100%" bgcolor="FFFFFF" style="height: 130px">
+                <tr>
+                  <td bgcolor="#000080"><font  color="white">Account Login</font></td>
+                </tr>
+                <tr>
+                  <td bgcolor="#000080">
+                    <table  border="0" align="center" width="100%" >
+		      <h:form>
+                      <tr>
+                        <td align="left"><font color="white"> Id: </font></td>
+                        <td align="left"><h:inputText  size="16" value="#{checkLogin.userID}"></h:inputText></td>
+                      </tr>
+                      <tr>
+                       <td align="left"><font color="white">Password:</font></td>
+                       <td align="left"><h:inputSecret size="18" value="#{checkLogin.password}"></h:inputSecret></td>
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td align="center">   <h:commandButton value="Submit" action="#{checkLogin.Check}"  />
+                            <h:commandButton value="Reset" type="reset"/></td>
+                      </tr>
+                      </h:form>
+                   </table>
+                  </td>
+                </tr>
+              </table>
+           </td>
+           <td align="left"  bgcolor="white" width="50%" style="vertical-align: top;"  >
+            <p align="center" style="font-family: 'GILL',HELVETICA, sans-serif;color: black;">
+            <font face="FUTURA MD BT" color="GREEN" size="5">Book Information<br/><br/></font>
+                <img alt="The image cannot be displayed" src="images/Feedback.jpg"/>
+        </p>
+                  <table border="0" width="80%" align="center">
+                         <h:form>
+                         <tr>
+                             <td>
+                                 Select Book Name
+                             </td>
+                             <td>
+                                 :
+                             </td>
+                             <td align="center">
+                                 <h:selectOneMenu
+                                     id="cname" value="#{checkBookDetails.bookName}" valueChangeListener="#{checkBookDetails.BookDetailsAction}" onchange="this.form.submit()">
+                                     <f:selectItem itemValue="" itemLabel="" />
+                                     <f:selectItem itemValue="A Noted Traveller" itemLabel="A Noted Traveller" />
+                                  <f:selectItem itemValue="Silverlight 4" itemLabel="Silverlight 4" />
+                                  <f:selectItem itemValue="HTML 5" itemLabel="HTML 5" />
+                                    <f:selectItem itemValue="America For Me" itemLabel="America For Me" />
+                                 </h:selectOneMenu>
+                             </td>
+                         </tr>
+                             <tr>
+                                 <td>
+                                     <br/>
+                                     Book Id
+                                 </td>
+                                 <td>
+                                     <br/>
+                                 :
+                             </td>
+
+                                 <td align="center">
+                                     <br/>
+                                     <h:outputText id="cid" binding="#{checkBookDetails.bookId}"/>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>
+                                     Category
+                                 </td>
+                                 <td>
+                                 :
+                             </td>
+
+                                 <td align="center">
+                                     <h:outputText id="cdur" binding="#{checkBookDetails.category}"/>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>
+                                     Author
+                                 </td>
+                                 <td>
+                                 :
+                             </td>
+
+                                 <td align="center">
+                                     <h:outputText id="celig" binding="#{checkBookDetails.bookAuthor}"/>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>
+                                     Book Price
+                                 </td>
+                                 <td>
+                                 :
+                             </td>
+
+                                 <td align="center">
+                                     <h:outputText id="cfee" binding="#{checkBookDetails.bookPrice}"/>
+                                 </td>
+                             </tr>
+
+                         </h:form>
+                     </table>
+
+
+
+        </td>
+           <td align="center" width="30%" bgcolor="Navy">
+              <font color="floralwhite" size="3" face="FUTURA MD BT">
+                    Why buy from us?</font><br/>
+                    <p align="Left" style="font-family: 'GILL',HELVETICA, sans-serif; color: floralwhite;">
+                      * Over 4.5 million books<br/>
+                      * Lowest possible prices<br/>
+                      * Books for all age groups<br/>
+                      * Order a book before it hits the market<br/>
+                      * Promotion schemes
+                    </p>
+                    <hr noshade="" size="1"/>
+                    <font color="floralwhite" size="3" face="FUTURA MD BT">
+                     Join the book club
+                      </font>
+
+              <p align="left" style="font-family: 'GILL',HELVETICA, sans-serif; color: floralwhite">
+                 * Get 10% discount<br/>
+                 * Get books free worth $20<br/>
+              </p>
+
+              <hr noshade="" size="1"/>
+
+              <font color="floralwhite" size="3" face="FUTURA MD BT">
+                 Customer service
+              </font>
+
+              <p align="left" style="font-family: 'GILL',HELVETICA, sans-serif; color: floralwhite">
+                 * All orders are executed in the least possible time.<br/>
+                 * Books are supplied all over the globe.<br/>
+                 * Books are thoroughly checked before dispatch.<br/>
+
+                 * Multiple modes of payment are available.<br/>
+              </p>
+            </td>
+            </tr>
+      </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    </h:body>
+</html>
+

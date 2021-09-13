@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Course Details</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="BaseTemplate.xhtml">
+            <ui:define name="body">
+             <font color="darkblue" size="+1">
+               <br/>
+               <font size="+2">
+                 <center> <b>Course Details </b></center>
+               </font>
+               <br/><br/>
+               <table border="0" width="50%" align="center">
+                 <h:form>
+                   <tr>
+                     <td>Select Course Name</td>
+                     <td>:</td>
+                     <td align="center">
+                        <h:selectOneMenu id="cname" value="#{courseDetailsBean.courseName}" valueChangeListener="#{courseDetailsBean.CourseDetailsAction}" onchange="this.form.submit()">
+                          <f:selectItem itemValue="" itemLabel="" />
+                          <f:selectItem itemValue="Science" itemLabel="Science" />
+                          <f:selectItem itemValue="Law" itemLabel="Law" />
+                          <f:selectItem itemValue="Medical" itemLabel="Medical" />
+                          <f:selectItem itemValue="Management" itemLabel="Management" />
+                        </h:selectOneMenu>
+                     </td>
+                   </tr>
+                   <tr>
+                      <td><br/>Course Id</td>
+                      <td><br/>:</td>
+                      <td align="center"><br/>
+                        <h:outputText id="cid" binding="#{courseDetailsBean.courseId}"/>
+                      </td>
+                   </tr>
+                   <tr>
+                     <td>Course Duration</td>
+                     <td>:</td>
+                     <td align="center">
+                         <h:outputText id="cdur" binding="#{courseDetailsBean.courseDuration}"/>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>Course Eligibility</td>
+                     <td>:</td>
+                     <td align="center">
+                         <h:outputText id="celig" binding="#{courseDetailsBean.courseEligibility}"/>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>Course Fee</td>
+                     <td>:</td>
+                     <td align="center">
+                         <h:outputText id="cfee" binding="#{courseDetailsBean.courseFee}"/>
+                     </td>
+                   </tr>
+                </h:form>
+              </table>
+            </font>
+          </ui:define>
+       </ui:composition>
+    </h:body>
+</html>
+

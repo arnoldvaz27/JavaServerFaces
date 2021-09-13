@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Grant University</title>
+    </h:head>
+    <h:body>
+        <table border="0" bgcolor="#808080" align="top" width="100%" style="height:100px">
+            <tr>
+                <td bgcolor="#000080" align="center">
+<font style="font-family: 'Arial Rounded MT Bold', Gadget, sans-serif;" size="+4" color="#FFE4B5">GRANT UNIVERSITY</font>
+                </td>
+                <td bgcolor="666699" align="left" width="180">     <img alt=""  src="Images/education.jpg" width="180" height="120" align="right"/>
+                 </td>
+            </tr>
+        </table>
+        <table bgcolor="white"  border="1"  align="top" width="100%" style="height:470px">
+   <tr >
+                <td bgcolor="#000080" width="20%" valign="top" align="center">
+                    <br/>   <br/>
+                    <h:form>
+                        <h:commandLink   style="font-family:Verdana, Geneva, sans-serif; text-decoration: none; color: white;" action="index" value="Home"></h:commandLink>
+                           <br/>   <br/>
+                          <h:commandLink   style="font-family:Verdana, Geneva, sans-serif; text-decoration: none; color: white;"  action="AboutUs" value="About Us"></h:commandLink>
+                    <br/>   <br/>
+                    <h:commandLink  style="font-family:Verdana, Geneva, sans-serif; text-decoration: none; color: white;" action="Registration" value="Registration"></h:commandLink>
+                    <br/>   <br/>
+                    <h:commandLink style="font-family:Verdana, Geneva, sans-serif; text-decoration: none; color: white;" action="Admissions" value="Admissions"></h:commandLink>
+                    <br/>   <br/>
+                    <h:commandLink  style="font-family:Verdana, Geneva, sans-serif; text-decoration: none; color: white;"  action="Contacts" value="Contact Us"></h:commandLink>
+                    </h:form>
+                    <br/>   <br/> <br/>   <br/>
+                    <table  cellspacing="0.5" border="1" align="center" width="100%" bgcolor="FFFFFF">
+                        <tr>
+                            <td bgcolor="#000080"><font  color="white">Account Login</font></td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#000080">
+       <table  border="0" align="center" width="100%" >
+		<h:form>
+              <tr>
+                <td align="left"><font color="white"> Id: </font>
+                </td>
+                <td align="left"><h:inputText  size="8" ></h:inputText></td>
+              </tr>
+          <tr>
+                        <td align="left"><font color="white">Password:</font></td>
+                        <td align="left"><h:inputSecret size="10"></h:inputSecret></td>
+                    </tr>
+                      <tr>
+
+                          <td align="center">   <h:commandButton value="Submit"/></td>
+                          <td align="center"><h:commandButton value="Reset" type="reset"/></td>
+                    </tr>
+</h:form>
+                    </table>
+                                </td>
+                            </tr>
+                    </table>
+              </td>
+       <!-- Page specific content starts here  -->
+                <td width="85%" valign="top" bgcolor="white">
+                    <font color="darkblue" size="+2"><br/>
+                      <center>Registration Form</center>
+                    </font> <br/>
+                    <table bgcolor="black" cellpadding="12px" border="1" width="60%" align="center"  style="height:120px">
+                            <tr>
+                                <td bgcolor="white">
+                    <table border="0" width="100%" bgcolor="white" align="center" style="height: 100px">
+ <h:form>
+     <tr>
+                            <td>First Name:</td>
+                            <td><h:inputText/></td>
+    </tr>
+                        <tr>
+                            <td>Last Name:</td>
+                            <td><h:inputText/></td>
+</tr>
+                        <tr>
+                            <td>Select Gender:</td>
+                            <td><h:selectOneRadio>
+                     <f:selectItem itemValue="m" itemLabel="Male" />
+                    <f:selectItem itemValue="f" itemLabel="Female" />
+                    </h:selectOneRadio>
+                            </td>
+</tr>
+                        <tr>
+                            <td>Date of birth:</td>
+                            <td><h:inputText/></td>
+</tr>
+                          <tr>
+                            <td>Address:</td>
+                            <td><h:inputTextarea rows="3"/></td>
+</tr>
+                          <tr>
+                            <td>Phone number:</td>
+                            <td><h:inputText/></td>
+</tr>
+                         <tr>
+                            <td>Email Id:</td>
+                            <td><h:inputText/></td>
+</tr>
+                        <tr>
+                            <td>User Id:</td>
+                            <td><h:inputText  size="10"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><h:inputSecret size="12"/></td>
+</tr>
+                        <tr>
+                            <td>Confirm password:</td>
+                            <td><h:inputSecret size="12"/></td>
+</tr>
+                         <tr>
+                            <td align="right"><br/>
+                                <h:commandButton value="Submit" />
+                            </td>
+                            <td align="left"><br/>
+                                <h:commandButton value="Reset"  type="reset" />
+                            </td>
+</tr>
+</h:form>
+                    </table>
+                </td>
+           </tr>
+               </table>
+                    </td>
+       <!-- Page specific content ends here  -->
+           </tr>
+        </table>
+    </h:body>
+</html>
+
